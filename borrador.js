@@ -50,3 +50,43 @@ for (let i=0; i <= numeros.length; i++) {
 }
 
 console.log ( 'El número mayor es:  ' + mayor)
+
+
+for ( let i = 1; i <= 5; i++) { 
+
+    let renglon = '';
+    
+    for (let j = 1; j <= 5; j++) {
+
+        renglon += `${ j * i }   `;
+    }
+
+    console.log ( renglon )
+
+
+
+}
+
+function max (a, b, c) {
+    let mayor;
+
+    if ( a < b ) {
+        if ( b < c) { 
+            mayor = c; 
+        } 
+        else { 
+            mayor = b
+        }
+    }   else if (a > c) { 
+            mayor = a; 
+        }
+        else { 
+            mayor = c; 
+        }
+    return mayor;
+}
+
+let mayor = max ( 1, 3, 2);
+
+console.log(mayor);
+
