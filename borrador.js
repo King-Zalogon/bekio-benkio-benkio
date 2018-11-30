@@ -90,3 +90,60 @@ let mayor = max ( 1, 3, 2);
 
 console.log(mayor);
 
+function masLargo ( arr ) {
+    let nombreLargo = '';
+    for ( let i = 0; i<arr.length; i++) { 
+        if (arr[i].length >= nombreLargo.length) {
+         nombreLargo = arr [i]
+        } 
+    
+    }
+
+    return nombreLargo
+}
+
+let heroes = ['Deadpool', 'Ciclope', 'Magneto', 'Profesor Charles Xavier'];
+
+let heroeLargo = masLargo ( heroes );
+
+console.log( heroeLargo ); // Profesor Charles Xavier
+
+
+function filtrarPorLetra ( arr, letra) {
+
+    let nuevoArr = [];
+    for (let i = 0; i < arr.length; i++ ) {
+        let currentArr = arr[i]
+        let arr1Letra = currentArr [0] 
+        if (arr1Letra === letra) {
+            nuevoArr.push (arr[i])
+        }
+    }
+
+    return nuevoArr;
+}
+
+let heroes = ['Doom', 'Dr. Strange', 'Hulk', 'She Hulk', 'Spiderman', 'Captain Marvel'];
+
+let heroesCon = filtrarPorLetra( heroes, 'S');
+
+console.log( heroesCon ); // She Hulk, Spiderman
+
+function filtrarPorLetra ( arr, letra) {
+
+    let nuevoArr = [];
+    for (let i = 0; i < arr.length; i++ ) {
+         
+        if ((arr[i])[0] === letra) {
+            nuevoArr.push (arr[i])
+        }
+    }
+
+    return nuevoArr;
+}
+
+let heroes = ['Doom', 'Dr. Strange', 'Hulk', 'She Hulk', 'Spiderman', 'Captain Marvel'];
+
+let heroesCon = filtrarPorLetra( heroes, 'S');
+
+console.log( heroesCon ); // She Hulk, Spiderman
